@@ -10,7 +10,7 @@ import SearchBox from "@/components/SearchBox/SearchBox";
 import Pagination from "@/components/Pagination/Pagination";
 import Modal from "@/components/Modal/Modal";
 import NoteForm from "@/components/NoteForm/NoteForm";
-import css from "@/components/NotesPage/NotesPage.module.css";
+import css from "./NotesPage.module.css";
 import { Toaster } from "react-hot-toast";
 
 const NotesClient = () => {

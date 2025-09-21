@@ -1,4 +1,4 @@
-"use client"; // Компонент интерактивный, поэтому он должен быть клиентским
+"use client";
 
 import {
     Formik,
@@ -8,9 +8,9 @@ import {
 } from "formik";
 import * as Yup from "yup";
 import css from "./NoteForm.module.css";
-import type { Note, NoteTag } from "@/types/note"; // Обновленный путь
+import type { Note, NoteTag } from "@/types/note";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { createNote, type NewNotePayload } from "@/lib/api"; // Обновленный путь
+import { createNote, type NewNotePayload } from "@/lib/api";
 
 // Схема валидации для полей формы
 const validationSchema = Yup.object({

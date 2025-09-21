@@ -2,7 +2,6 @@
 
 import css from "./SearchBox.module.css";
 
-// Интерфейс для пропсов компонента SearchBox.
 interface SearchBoxProps {
     // Текущее значение поля поиска.
     value: string;
