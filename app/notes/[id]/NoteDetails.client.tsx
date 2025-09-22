@@ -25,6 +25,7 @@ const NoteDetailsClient = () => {
         },
         // Этот ключ предотвращает выполнение запроса, если id отсутствует.
         enabled: !!id,
+        refetchOnMount: false,
     });
 
     if (isLoading) {

@@ -7,9 +7,7 @@ import { fetchNoteById } from "@/lib/api";
 import NoteDetailsClient from "./NoteDetails.client";
 
 interface NoteDetailsPageProps {
-    params: {
-        id: string;
-    };
+    params: Promise<{ id: string }>;
 }
 
 export default async function NoteDetailsPage({
@@ -17,9 +15,12 @@ export default async function NoteDetailsPage({
 }: NoteDetailsPageProps) {
     const queryClient = new QueryClient();
 
+    const resolvedParams = await params;
+    const { id } = resolvedParams;
+
     await queryClient.prefetchQuery({
-        queryKey: ["note", params.id],
-        queryFn: () => fetchNoteById(params.id),
+        queryKey: ["note", id],
+        queryFn: () => fetchNoteById(id),
     });
 
     return (
